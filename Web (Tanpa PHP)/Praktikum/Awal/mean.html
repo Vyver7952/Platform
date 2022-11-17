@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mean Calculator</title>
+  </head>
+  <body>
+    <h1>Mean Calculator</h1>
+
+    <script>
+      let jmlnilai = prompt("Berapa banyak nilai yang ada : ");
+      var ratarata = mean(jmlnilai);
+
+      console.log(ratarata);
+
+      function mean(jml) {
+        var nilai;
+        var total = 0;
+
+        for (let i = 0; i < jml; i++) {
+          nilai = prompt("Masukkan Nilai Tugas ke-" + (i + 1));
+          total = total + Number(nilai);
+        }
+
+        return total / jml;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+    <script>
+      function kalkulator(param) { // Sebuah function dengan nama kalkulator dan memiliki 1 parameter
+        var bilangan1 = document.getElementById("bilangan1").value;
+        // Membuat variable bernama bilangan1 dan diinisiasikan dengan nilai yang didapatkan dari document dengan id 'bilangan1'
+        var bilangan2 = document.getElementById("bilangan2").value;
+        // Membuat variable bernama bilangan2 dan diinisiasikan dengan nilai yang didapatkan dari document dengan id 'bilangan2'
+        var hasil = ""; // Membuat variable bernama hasil dan diinisiasikan dengan nilai kosong
+
+        if (param == 0) { // Sebuah percabangan yang akan berjalan jika parameter function adalah 0
+          hasil = Number(bilangan1) + Number(bilangan2); // Penjumlahan 2 variable dan disimpan dalam variable hasil
+        } else { // Sebuah percabangan yang akan berjalan jika parameter function adalah 1
+          hasil = Number(bilangan1) - bilangan2;  // Pengurangan 2 variable dan disimpan dalam variable hasil
+        }
+
+        document.getElementById("hasil").value = hasil; // Mengganti nilai dari sebuah document dengan id 'hasil' dengan variable hasil
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Kalkulator Tambah/Kurang</h1>
+    <form action="#"> <!--Pembuatan sebuah form dengan action '#'-->
+      <label for="bilangan1">Bilangan 1</label> <!--Pembuatan sebuah label dengan isi 'Bilangan 1'-->
+      <input type="number" id="bilangan1" />  <!--Pembuatan sebuah input dengan tipe 'number' dan memiliki id 'bilangan1'-->
+
+      <br />
+
+      <label for="bilangan2">Bilangan 2</label> <!--Pembuatan sebuah label dengan isi 'Bilangan 2'-->
+      <input type="number" id="bilangan2" /> <!--Pembuatan sebuah input dengan tipe 'number' dan memiliki id 'bilangan2'-->
+
+      <br />
+
+      <input type="submit" id="tambah" value="Tambah" onclick="kalkulator(0)"/>
+      <!--Pembuatan sebuah input dengan tipe 'submit', memiliki id 'tambah', memiliki value 'Tambah' dan event onclick
+        yang memanggil function kalkulator dengan parameter 0-->
+      <input type="submit" id="kurang" value="Kurang" onclick="kalkulator(1)"/>
+      <!--Pembuatan sebuah input dengan tipe 'submit', memiliki id 'kurang', memiliki value 'Kurang' dan event onclick
+        yang memanggil function kalkulator dengan parameter 1-->
+
+      <br />
+
+      <label for="hasil">Hasil</label> <!--Pembuatan sebuah label dengan isi 'Hasil'-->
+      <input type="text" id="hasil" disabled />
+      <!--Pembuatan sebuah input dengan tipe 'text', memiliki id 'hasil', dan input tersebut tidak bisa di-edit (disable)-->
+    </form>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    <h1>Kalkulator</h1>
+
+    <script>
+      let a = prompt("Masukkan nilai pertama");
+      let b = prompt("Masukkan nilai kedua");
+      var c;
+
+      c = penjumlahan(a, b);
+      console.log("Hasil Penjumlahan " + a + " dan " + b + " : " + c);
+      c = pengurangan(a, b);
+      console.log("Hasil Pengurangan " + a + " dan " + b + " : " + c);
+      c = perkalian(a, b);
+      console.log("Hasil Perkalian " + a + " dan " + b + " : " + c);
+      c = pembagian(a, b);
+      console.log("Hasil Pembagian " + a + " dan " + b + " : " + c);
+
+      function penjumlahan(a, b) {
+        return Number(a) + Number(b);
+      }
+
+      function pengurangan(a, b) {
+        return a - b;
+      }
+
+      function perkalian(a, b) {
+        return a * b;
+      }
+
+      function pembagian(a, b) {
+        return a / b;
+      }
+    </script>
+  </body>
+</html>

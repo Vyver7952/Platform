@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membalik Kata</title>
+  </head>
+  <body>
+    <h1>Membalik Kata</h1>
+
+    <script>
+      let a = prompt("Masukkan kalimat : ");
+      var b = membalik(a);
+
+      console.log("Hasil Membalik Kata : " + b);
+
+      function membalik(a) {
+        var temp = "";
+        for (let i = String(a).length - 1; i >= 0; i--) {
+          temp = temp + String(a).charAt(i);
+        }
+        return temp;
+      }
+    </script>
+  </body>
+</html>
