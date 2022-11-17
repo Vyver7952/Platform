@@ -1,0 +1,47 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #006dd4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px auto;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+}
+
+.login-btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.checkbox-container{
+  display: block;
+}
